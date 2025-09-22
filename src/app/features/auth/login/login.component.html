@@ -1,15 +1,23 @@
 <section class="bg-white rounded-md p-5 my-10 md:w-[70%] mx-auto shadow-md">
     <div class="container">
         <h1 class="text-sky-600 text-2xl font-semibold py-3">Login now</h1>
-    <form>
-        <app-input [type]="'email'"
+    <form [formGroup]="loginForm" (ngSubmit)="signin()">
+        <app-input [control]="emailControl"
+                   [type]="'email'"
                    [id]="'email'"
                    [placeholder]="'Type your email..'"></app-input>
-        <app-input [type]="'password'"
+        <app-input [control]="passwordControl"
+                   [type]="'password'"
                    [id]="'password'"
                    [placeholder]="'Type your password..'"></app-input>
-    <button class="btn mb-3">Signin</button>
-    <p class="text-sm font-semibold text-gray-500">Not registered? <span class="underline text-sky-600 cursor-pointer">Create account</span></p>
+    <button class="btn mb-3">Signin
+        @if (isLoading) {
+            <span>
+                <i class="fa-solid fa-spinner fa-spin text-white text-lg ms-2"></i>
+            </span>
+        }
+    </button>
+    <p class="text-sm font-semibold text-gray-500">Not registered? <span class="underline text-sky-600 cursor-pointer" routerLink="/register">Create account</span></p>
     </form>
     </div>
 </section>
