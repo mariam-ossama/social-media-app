@@ -3,7 +3,18 @@
 @import "flowbite/src/themes/default";
 @plugin "flowbite/plugin";
 @source "../node_modules/flowbite";
+@source "../node_modules/flowbite-datepicker";
 
 body {
     background-color: #F2F2F2;
+}
+@layer theme {
+    .container {
+        margin-inline: auto;
+    }
+}
+@layer components {
+    .btn {
+        @apply bg-sky-600 py-2 px-7 text-white rounded-lg mt-2 cursor-pointer;
+    }
 }

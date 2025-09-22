@@ -1,1 +1,36 @@
-<p>register works!</p>
+<section class="bg-white rounded-md p-5 my-10 md:w-[70%] mx-auto shadow-md">
+    <div class="container">
+        <h1 class="text-sky-600 text-2xl font-semibold py-3">Register now</h1>
+    <form>
+        <app-input [type]="'text'"
+                   [id]="'name'"
+                   [placeholder]="'Type your name..'"></app-input>
+        <app-input [type]="'email'"
+                   [id]="'email'"
+                   [placeholder]="'Type your email..'"></app-input>
+        <app-input [type]="'password'"
+                   [id]="'password'"
+                   [placeholder]="'Type your password..'"></app-input>
+        <app-input [type]="'password'"
+                   [id]="'confirmPass'"
+                   [placeholder]="'confirm password..'"></app-input>
+        <app-input [type]="'text'"
+                   [id]="'date'"
+                   [placeholder]="'Select date'"></app-input>
+        <!--radio button-->
+        
+<div class="flex">
+    <div class="flex items-center me-4">
+        <input id="male_gender" type="radio" value="male" name="gender" class="w-4 h-4 text-sky-600 bg-gray-100 border-gray-300 focus:ring-sky-500 dark:focus:ring-sky-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+        <label for="male_gender" class="ms-2 text-sm font-medium dark:text-gray-300">Male</label>
+    </div>
+    <div class="flex items-center me-4">
+        <input id="female_gender" type="radio" value="female" name="gender" class="w-4 h-4 text-sky-600 bg-gray-100 border-gray-300 focus:ring-sky-500 dark:focus:ring-sky-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+        <label for="female_gender" class="ms-2 text-sm font-medium dark:text-gray-300">Female</label>
+    </div>
+</div>
+    <button class="btn mb-3">Signup</button>
+    <p class="text-sm text-gray-500 font-semibold">Already registered? <span class="underline text-sky-600 cursor-pointer">Login</span></p>
+    </form>
+    </div>
+</section>

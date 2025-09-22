@@ -1,1 +1,15 @@
-<p>login works!</p>
+<section class="bg-white rounded-md p-5 my-10 md:w-[70%] mx-auto shadow-md">
+    <div class="container">
+        <h1 class="text-sky-600 text-2xl font-semibold py-3">Login now</h1>
+    <form>
+        <app-input [type]="'email'"
+                   [id]="'email'"
+                   [placeholder]="'Type your email..'"></app-input>
+        <app-input [type]="'password'"
+                   [id]="'password'"
+                   [placeholder]="'Type your password..'"></app-input>
+    <button class="btn mb-3">Signin</button>
+    <p class="text-sm font-semibold text-gray-500">Not registered? <span class="underline text-sky-600 cursor-pointer">Create account</span></p>
+    </form>
+    </div>
+</section>
